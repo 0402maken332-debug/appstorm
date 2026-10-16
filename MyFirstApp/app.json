@@ -1,11 +1,13 @@
 {
   "expo": {
-    "name": "MyFirstApp",
+    "name": "Campus Hub",
     "slug": "MyFirstApp",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "automatic",
+    "scheme": "campus-hub",
+    "experiments": { "typedRoutes": true },
     "ios": {
       "supportsTablet": true
     },
@@ -19,7 +21,18 @@
       "predictiveBackGestureEnabled": false
     },
     "web": {
-      "favicon": "./assets/favicon.png"
-    }
+      "favicon": "./assets/favicon.png",
+      "output": "single"
+    },
+    "plugins": [
+      "expo-router",
+      ["expo-splash-screen", {
+        "image": "./assets/splash-icon.png",
+        "imageWidth": 180,
+        "backgroundColor": "#F4F8FC",
+        "dark": { "backgroundColor": "#101827" }
+      }],
+      "expo-font"
+    ]
   }
 }
